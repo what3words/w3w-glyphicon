@@ -24,7 +24,8 @@ This sample is composed of an `index.html` page, using a `css` which is includin
 
 what3words font contains the square icon and can be used inline text with
 ```html
-<i class="glyphicon-w3w">&#xe800;</i>```
+<i class="glyphicon-w3w">&#xe800;</i>
+```
 
 The `glyphicon-w3w` class is defined below:
 
