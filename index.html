@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>what3words font</title>
+    <meta name="description" content="How to display a 3word address with what3words font?">
+    <meta name="author" content="Arnaud Ferrand">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/prism.css" />
+    <link rel="stylesheet" type="text/css" href="css/w3w-glyphicon.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1><image src="https://what3words.com/assets/images/w3w_square_red.png">&nbsp;what3words font</h1>
+            <h1><small>How to display a 3word address</small></h1>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <i class="glyphicon-w3w">&#xe800;</i>
+                <span class="3-word-address">index.home.raft</span>
+            </div>
+        </div>
+
+
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active"><a href="#tabHTML" data-toggle="tab">HTML</a></li>
+          <li role="presentation"><a href="#tabCSS" data-toggle="tab">CSS</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tabHTML">
+                <div>
+                    <pre><code class="language-markup">
+&lt;div>
+    &lt;i class="glyphicon-w3w">&amp;#xe800;&lt;/i>
+    &lt;span class="3-word-address">index.home.raft&lt;/span>
+&lt;/div>
+                    </code></pre>
+                </div>
+            </div>
+            <div class="table-pane fade" id="tabCSS">
+                <div>
+                    <pre><code class="language-css">
+@font-face {
+    font-family: "w3w-grid";
+    src: url("../fonts/w3w-grid.eot");
+    src: url("../fonts/w3w-grid.eot#iefix") format("embedded-opentype"),
+    url("../fonts/w3w-grid.woff") format("woff"),
+    url("../fonts/w3w-grid.ttf") format("truetype"),
+    url("../fonts/w3w-grid.svg#w3w-grid") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.glyphicon-w3w {
+    font-family: "w3w-grid";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* You can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./container -->
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+</body>
+
+</html>
