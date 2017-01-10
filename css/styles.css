@@ -1,0 +1,13 @@
+.square {
+    margin-top: 3px;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+.red {
+    background: #e11f26;
+}
+.dark-blue {
+    background: #0a3049;
+}
