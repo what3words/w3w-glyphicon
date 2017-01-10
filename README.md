@@ -13,6 +13,10 @@ what3words font is available from a css file, it contains the square icon and ca
 <i class="w3w-logo"></i>
 ```
 
+## Resources
+
+Complete [styleguide](http://developer.what3words.com/styleguide/) on  what3words developer site.
+
 ## LICENSE
 
 The MIT License (MIT)
