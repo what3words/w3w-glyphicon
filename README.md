@@ -2,7 +2,7 @@
 
 This repo shows how to display a 3 word address with the square logo
 
-This sample is visible live here https://what3words.github.io/w3w-glyphicon
+This sample is visible live here https://what3words.github.io/w3w-glyphicon/
 
 ## How to use
 
