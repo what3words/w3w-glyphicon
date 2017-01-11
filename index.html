@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>what3words : 3 word address font</title>
+    <meta name="description" content="How to display a 3 word address with what3words font?">
+    <meta name="author" content="Arnaud Ferrand">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/prism.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="https://assets.what3words.com/css/w3w-glyphicon.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1><image src="https://what3words.com/assets/images/w3w_square_red.png">&nbsp;How to display a 3 word address</h1>
+            <h1><small>using wha3words font</small></h1>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <td>
+                            <i class="w3w-logo w3w-red"></i> index.home.raft
+                        </td>
+                        <td>
+                            <button class="btn btn-default btn-block" data-toggle="popover" data-container="body" data-content="color: #e11f26;" data-placement="left" >
+                                <div class="square red"><i class="w3w-logo w3w-white"></i></div>&nbsp;w3w-red
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="w3w-logo w3w-dark-blue"></i> daring.lion.race
+                        </td>
+                        <td>
+                            <button class="btn btn-default btn-block" data-toggle="popover" data-container="body" data-content="color: #0a3049;" data-placement="left" >
+                                <div class="square dark-blue"><i class="w3w-logo w3w-white"></i></div>&nbsp;w3w-dark-blue
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Complete <a href="http://developer.what3words.com/styleguide/">styleguide</a> on <i class="w3w-logo"></i> what3words developer site.
+                </p>
+            </div>
+        </div>
+
+
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#tabHTML" data-toggle="tab">HTML</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tabHTML">
+                <div>
+                    <pre><code class="language-markup">
+&lt;link rel="stylesheet" type="text/css" href="https://assets.what3words.com/css/w3w-glyphicon.css" />
+
+&lt;div>
+    &lt;i class="w3w-logo w3w-red">&lt;/i> index.home.raft
+&lt;/div>
+
+&lt;div>
+    &lt;i class="w3w-logo w3w-dark-blue">&lt;/i> daring.lion.race
+&lt;/div>
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./container -->
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</body>
+
+</html>
