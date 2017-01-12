@@ -11,12 +11,12 @@
     <meta name="author" content="Arnaud Ferrand">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/prism.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="https://assets.what3words.com/css/w3w-glyphicon.css" />
 </head>
 
 <body>
+
     <div class="container">
         <div class="page-header">
             <h1><image src="https://what3words.com/assets/images/w3w_square_red.png">&nbsp;How to display a 3 word address</h1>
@@ -32,7 +32,7 @@
                         </td>
                         <td>
                             <button class="btn btn-default btn-block" data-toggle="popover" data-container="body" data-content="color: #e11f26;" data-placement="left" >
-                                <div class="square red"><i class="w3w-logo w3w-white"></i></div>&nbsp;w3w-red
+                                <div class="square w3w-red-bg"><i class="w3w-logo w3w-white"></i></div>&nbsp;w3w-red
                             </button>
                         </td>
                     </tr>
@@ -42,7 +42,7 @@
                         </td>
                         <td>
                             <button class="btn btn-default btn-block" data-toggle="popover" data-container="body" data-content="color: #0a3049;" data-placement="left" >
-                                <div class="square dark-blue"><i class="w3w-logo w3w-white"></i></div>&nbsp;w3w-dark-blue
+                                <div class="square w3w-dark-blue-bg"><i class="w3w-logo w3w-white"></i></div>&nbsp;w3w-dark-blue
                             </button>
                         </td>
                     </tr>
@@ -75,12 +75,99 @@
                 </div>
             </div>
         </div>
+
+            <div class="page-header">
+                <h2>Using W3W embeds</h2>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="w3w-embed small">
+                                    <style type="text/css">
+                                    @import url("https://assets.what3words.com/css/w3w-glyphicon.css");
+                                    </style>
+                                    <div class="w3w-address">
+                                        <i class="w3w-logo w3w-red"></i>fights.rainbow.short
+                                    </div>
+                                    <div class="w3w-popup">
+                                        <div class="inner">
+                                            what3words gives every 3m x 3m in the world a unique 3 word address. This one describes the precise entrance of the hostel. <a href="http://what3words.com/about/" target="_blank">Click here to learn more.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="w3w-embed medium">
+                                    <style type="text/css">
+                                    @import url("https://assets.what3words.com/css/w3w-glyphicon.css");
+                                    </style>
+                                    <div class="w3w-address">
+                                        <i class="w3w-logo w3w-red"></i>fights.rainbow.short
+                                    </div>
+                                    <div class="w3w-popup">
+                                        <div class="inner">
+                                            what3words gives every 3m x 3m in the world a unique 3 word address. This one describes the precise entrance of the hostel. <a href="http://what3words.com/about/" target="_blank">Click here to learn more.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="w3w-embed large">
+                                    <style type="text/css">
+                                    @import url("https://assets.what3words.com/css/w3w-glyphicon.css");
+                                    </style>
+                                    <div class="w3w-address">
+                                        <i class="w3w-logo w3w-red"></i>fights.rainbow.short
+                                    </div>
+                                    <div class="w3w-popup">
+                                        <div class="inner">
+                                            what3words gives every 3m x 3m in the world a unique 3 word address. This one describes the precise entrance of the hostel. <a href="http://what3words.com/about/" target="_blank">Click here to learn more.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#tabHTMLpopup" data-toggle="tab">HTML embed codes with Popup</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="tabHTMLpopup">
+                    <div>
+                        <pre><code class="language-markup">
+    &#x3C;div class=&#x22;w3w-embed small&#x22;&#x3E;
+        &#x3C;style&#x3E;
+            @import url(&#x22;https://assets.what3words.com/css/w3w-glyphicon.css&#x22;);
+        &#x3C;/style&#x3E;
+        &#x3C;div class=&#x22;w3w-address&#x22;&#x3E;
+            &#x3C;i class=&#x22;w3w-logo w3w-red&#x22;&#x3E;&#x3C;/i&#x3E;fights.rainbow.short
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;w3w-popup&#x22;&#x3E;
+            &#x3C;div class=&#x22;inner&#x22;&#x3E;
+                what3words gives every 3m x 3m in the world a unique 3 word address. This one describes the precise entrance of the hostel. &#x3C;a href=&#x22;http://what3words.com/about/&#x22; target=&#x22;_blank&#x22;&#x3E;Click here to learn more.&#x3C;/a&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <
+
     </div>
     <!-- ./container -->
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
     <script>
         $(function() {
             $('[data-toggle="popover"]').popover()
