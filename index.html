@@ -61,7 +61,7 @@
         <div class="tab-content">
             <div class="tab-pane fade active in" id="tabHTML">
                 <div>
-                    <pre><code class="language-markup">
+                    <pre class="copytoclipboard"><code class="language-markup">
 &lt;link rel="stylesheet" type="text/css" href="https://assets.what3words.com/css/w3w-glyphicon.css" />
 
 &lt;div>
@@ -141,20 +141,8 @@
             <div class="tab-content">
                 <div class="tab-pane fade active in" id="tabHTMLpopup">
                     <div>
-                        <pre><code class="language-markup">
-    &#x3C;div class=&#x22;w3w-embed small&#x22;&#x3E;
-        &#x3C;style&#x3E;
-            @import url(&#x22;https://assets.what3words.com/css/w3w-glyphicon.css&#x22;);
-        &#x3C;/style&#x3E;
-        &#x3C;div class=&#x22;w3w-address&#x22;&#x3E;
-            &#x3C;i class=&#x22;w3w-logo w3w-red&#x22;&#x3E;&#x3C;/i&#x3E;fights.rainbow.short
-        &#x3C;/div&#x3E;
-        &#x3C;div class=&#x22;w3w-popup&#x22;&#x3E;
-            &#x3C;div class=&#x22;inner&#x22;&#x3E;
-                what3words gives every 3m x 3m in the world a unique 3 word address. This one describes the precise entrance of the hostel. &#x3C;a href=&#x22;http://what3words.com/about/&#x22; target=&#x22;_blank&#x22;&#x3E;Click here to learn more.&#x3C;/a&#x3E;
-            &#x3C;/div&#x3E;
-        &#x3C;/div&#x3E;
-    &#x3C;/div&#x3E;
+                        <pre class="copytoclipboard"><code class="language-markup">
+&#x3C;div class=&#x22;w3w-embed small&#x22;&#x3E; &#x3C;style&#x3E;@import url(&#x22;https://assets.what3words.com/css/w3w-glyphicon.css&#x22;); &#x3C;/style&#x3E; &#x3C;div class=&#x22;w3w-address&#x22;&#x3E; &#x3C;i class=&#x22;w3w-logo w3w-red&#x22;&#x3E;&#x3C;/i&#x3E;fights.rainbow.short &#x3C;/div&#x3E;&#x3C;div class=&#x22;w3w-popup&#x22;&#x3E; &#x3C;div class=&#x22;inner&#x22;&#x3E; what3words gives every 3m x 3m in the world a unique 3 word address. This one describes the precise entrance of the hostel. &#x3C;a href=&#x22;http://what3words.com/about/&#x22; target=&#x22;_blank&#x22;&#x3E;Click here to learn more.&#x3C;/a&#x3E; &#x3C;/div&#x3E;&#x3C;/div&#x3E;&#x3C;/div&#x3E;
                         </code></pre>
                     </div>
                 </div>
@@ -168,10 +156,40 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script>
     <script>
         $(function() {
             $('[data-toggle="popover"]').popover()
-        })
+        });
+       /* Prism copy to clipbaord for all pre with copytoclipboard class */
+        $('pre.copytoclipboard').each(function () {
+            $this = $(this);
+            $button = $('<button>Copy</button>');
+            $this.wrap('<div/>').removeClass('copytoclipboard');
+            $wrapper = $this.parent();
+            $wrapper.addClass('copytoclipboard-wrapper').css({position: 'relative'})
+            $button.css({position: 'absolute', top: 10, right: 10}).appendTo($wrapper).addClass('copytoclipboard btn btn-default');
+            /* */
+            var copyCode = new Clipboard('button.copytoclipboard', {
+                target: function (trigger) {
+                    return trigger.previousElementSibling;
+                }
+            });
+            copyCode.on('success', function (event) {
+                event.clearSelection();
+                event.trigger.textContent = 'Copied';
+                window.setTimeout(function () {
+                    event.trigger.textContent = 'Copy';
+                }, 2000);
+            });
+            copyCode.on('error', function (event) {
+                event.trigger.textContent = 'Press "Ctrl + C" to copy';
+                window.setTimeout(function () {
+                    event.trigger.textContent = 'Copy';
+                }, 2000);
+            });
+        });
+
     </script>
 </body>
 
